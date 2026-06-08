@@ -31,7 +31,7 @@ app.listen(PORT, async () => {
   
 });
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   console.log('Database synchronized');
 }).catch((err) => {
   console.error('Error synchronizing database:', err);
