@@ -33,13 +33,6 @@ const User = sequelize.define(
       defaultValue: Sequelize.NOW,
     },
   },
-  {
-    tableName: 'users',
-    timestamps: true,
-    engine: 'InnoDB',
-    charset: 'utf8mb4',
-    collate: 'utf8mb4_unicode_ci',
-  }
 );
 
 module.exports = User;

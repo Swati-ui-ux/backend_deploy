@@ -19,5 +19,12 @@ const sequelize = new Sequelize(
     }
   }
 );
-
+; (async () => {
+try {
+  await sequelize.authenticate()
+  console.log("db connected")
+} catch (error) {
+  console.log("eror in db")
+}
+})()
 module.exports = { sequelize, Sequelize };
