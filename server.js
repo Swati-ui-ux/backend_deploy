@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 // const helmet = require('helmet');
-const db = require('./models');
+// const db = require('./models');
 // const apiRoutes = require('./routes');
 
 const app = express();
@@ -26,15 +26,15 @@ app.use((req, res) => {
 });
 
 
-app.listen(PORT, async () => {
-    console.log(`Server is running on port ${PORT}`);
+// app.listen(PORT, async () => {
+//     console.log(`Server is running on port ${PORT}`);
   
-});
+// });
 
-db.sequelize.sync().then(() => {
-  console.log('Database synchronized');
-}).catch((err) => {
-  console.error('Error synchronizing database:', err);
-});
+// db.sequelize.sync().then(() => {
+//   console.log('Database synchronized');
+// }).catch((err) => {
+//   console.error('Error synchronizing database:', err);
+// });
 
 module.exports = app;
